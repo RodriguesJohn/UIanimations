@@ -1,0 +1,58 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+.center-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+}
+
+.my-button {
+  padding: 16px 24px;
+  font-size: 16px;
+  width: 150px;
+  color: white;
+  background-color: #0048ff;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.my-button:hover {
+  background-color: #0033cc;
+  transform: translateY(-2px);
+}
+.my-button:active {
+  background-color: #002699;
+  transform: translateY(0);
+  cursor: pointer;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  width: 530px;
+  padding: 12px 16px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(162, 162, 162, 0.12);
+  font-family: poppins, sans-serif;
+  border: 1px solid #e0e0e0;
+  position: absolute;
+  left: 50%;
+  top: 450px;
+  transform: translate(-50%, 30px);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.4, 2, 0.6, 1);
+  z-index: 1000;
+}
+
+.card.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
