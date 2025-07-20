@@ -1,73 +1,58 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
-
-body{
-    background-color: #f0f0f0;
-    min-height:100vh;
-    margin:0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Open Sans', Arial, sans-serif;
+body {
+  min-height: 100vh;
+  margin: 0;
 }
 
-.card{
-    border-radius: 16px; /* Adjust the value for more or less roundness */
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 8px 32px rgba(216, 216, 216, 0.12); 
-    text-align: center;
-    width: 300px; /* Fixed width for the card */
-    height: 400px; /* Fixed height for the card */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-    font-family: 'Open Sans', Arial, sans-serif;
+.center-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
 }
 
-.card .title {
-    font-size: 16px;
-    font-weight: 600;
-    margin: 0 0 10px 8px;
-    padding: 0;
-    text-align: left;
-    line-height: 1;
+.my-button {
+  padding: 16px 24px;
+  font-size: 16px;
+  width: 150px;
+  color: white;
+  background-color: #0048ff;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.my-button:hover {
+  background-color: #0033cc;
+  transform: translateY(-2px);
+}
+.my-button:active {
+  background-color: #002699;
+  transform: translateY(0);
+  cursor: pointer;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  width: 530px;
+  padding: 12px 16px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(162, 162, 162, 0.12);
+  font-family: poppins, sans-serif;
+  border: 1px solid #e0e0e0;
+  position: absolute;
+  left: 50%;
+  top: 450px;
+  transform: translate(-50%, 30px);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.4, 2, 0.6, 1);
+  z-index: 1000;
 }
 
-.disc {
-    font-size: 14px;
-    color: #9b9b9b;
-    text-align: left;
-    margin: 0 0 0 8px;
-    padding: 0;
-    line-height: 1;
+.card.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
 }
-.card .inner-card {
-    background-color: #ffffff;
-    border: 0.4px solid #eaeaea;
-    box-shadow: 0 8px 32px rgba(146, 146, 146, 0.08);
-    margin-top: 20px;
-    width: 100%; /* Match the width of the outer card */
-    transform: translateY(100%);
-    opacity: 0;
-    height: 100px;
-    box-sizing: border-box;
-    border-radius: 12px;
-    transition: transform 500ms cubic-bezier(0.19, 1, 0.22, 1), opacity 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 8px 8px;
-}
-
-.card:hover .inner-card {
-    transform: translate(0);
-    opacity: 1;
-}
-
-
-
-
